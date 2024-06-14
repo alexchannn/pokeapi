@@ -1,0 +1,124 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   margin: auto;
+   max-width: 70rem;
+   font-family: "Arial", sans-serif;
+   padding: 1.25rem;
+   text-align: center;
+   background-color: #121212;
+   color: #ffffff;
+}
+
+canvas {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+}
+
+h1 {
+   color: #00ffcc;
+   font-size: 3rem;
+   margin: 2rem 0;
+}
+
+.grid-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+   gap: 2.5rem;
+   justify-items: center;
+}
+
+.pokemon-item {
+   text-align: center;
+   margin: 0.5rem;
+   padding: 0.5rem;
+   border: 1px solid #444;
+   border-radius: 0.5rem;
+   cursor: pointer;
+   transition: transform 0.2s, background-color 0.2s;
+   width: 15rem; /* 240px */
+   background-color: rgba(30, 30, 30, 0.5);
+   backdrop-filter: blur(0.5rem);
+}
+
+.pokemon-item:hover {
+   transform: scale(1.05);
+   background-color: #333;
+}
+
+.pokemon-item img {
+   width: 12.5rem;
+   height: 12.5rem;
+}
+
+.pokemon-item p {
+   color: #00ffcc;
+   font-size: 1.2rem;
+   font-weight: bold;
+   text-transform: capitalize;
+}
+
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0, 0, 0, 0.8);
+   backdrop-filter: blur(10px);
+}
+
+.modal-content {
+   background-color: #222;
+   margin: 10% auto;
+   padding: 1.25rem;
+   border: 1px solid #888;
+   width: 80%;
+   max-width: 31.25rem;
+   text-align: center;
+   border-radius: 0.625rem;
+   color: #ffffff;
+}
+
+.close {
+   color: #ccc;
+   float: right;
+   font-size: 1.75rem;
+   font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+   color: #fff;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+#details img {
+   width: 12rem;
+   height: 12rem;
+   display: block;
+   margin: 0 auto 1.25rem;
+}
+
+#details h2 {
+   color: #00ffcc;
+   font-size: 2rem;
+   text-transform: capitalize;
+}
+
+#details p {
+   text-align: left;
+   margin: 0.5rem 0;
+}
